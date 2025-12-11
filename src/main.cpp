@@ -1,6 +1,6 @@
 #include<iostream>
 #include<thread>
-#include "../include/RedisServer.hpp"
+#include "../include/Server.hpp"
 #include"../include/DataBase.hpp"
 int main(int argc , char* argv[]){
 
