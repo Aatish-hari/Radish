@@ -2,8 +2,8 @@
 Redis like in memory data store server implemented in C++. Radish can perform Redis functionality for strings, lists, and hashes, with auto Persistence and multiple client support.
 
 ## Features
-**RESP Protocol:** Parses RESP arrays for commands; generates compliant responses.   
-**Data Types:** Supports strings (simple key-value), lists (deque-based), and hashes (unordered_maps).   
+**RESP Protocol:** Implemented to handel RESP (Redis Serialization Protocol) for commands and responses.    
+**Data Types:** Supports strings (each key with value), lists (each key with deque), and hashes (each key with unordered_map).   
 **Persistence:** Auto-saves/loads to redi.db.   
 **Concurrency:** Mutex-protected singleton DataBase, per-client threads for multi-user support.   
 
