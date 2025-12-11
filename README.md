@@ -1,14 +1,13 @@
 # Radish
 Redis like in memory data store server implemented in C++. Radish can perform Redis functionality for strings, lists, and hashes, with auto Persistence and multiple client support.
 
-
 ## Features
-### Protocol Support: Handles RESP (Redis Serialization Protocol) for commands and responses.
-### Data Types: Strings, Lists, Hashes.
-### Persistence: Automatic save and load redi.db file by default.
-### Concurrency: Thread-safe with mutexes, one thread per client connection.
+RESP Protocol: Parses RESP arrays for commands; generates compliant responses (e.g., +OK\r\n).
+Data Types: Supports strings (simple key-value), lists (deque-based), and hashes (unordered_maps).
+Persistence: Auto-saves/loads to redi.db (text format).
+Concurrency: Mutex-protected singleton DataBase, per-client threads for multi-user support.
 
-## Supported Commands
+## Supported Commands:
 | General Commands | String Commands | List Commands | Hash Commands |
 |------------------|-----------------|---------------|---------------|
 | SING             | SET key value   | LLEN key      | HSET key field value |
@@ -18,11 +17,11 @@ Redis like in memory data store server implemented in C++. Radish can perform Re
 |                  |                 | RPOP key      |               |
 
 ## Installation
-This project uses Makefile. Ensure you have a C++17 (or later) compiler.   
+This project uses Makefile. Ensure you have a C++17 (or later ones) compiler.   
 -First 'make' from root directory to make build folder and to get server.exe.   
 -Run ./server to start server, server will listen to default port 6379   
 -compile client.cpp and run client.exe, client will connect server   
 
 
---future aspects- can add more commands
+## --future aspects- can add more commands
 
