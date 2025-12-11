@@ -9,22 +9,12 @@ Redis like in memory data store server implemented in C++. Radish can perform Re
 ### Concurrency: Thread-safe with mutexes; one thread per client connection.
 
 ## Supported Commands
-+----------------------------+------------------------------+------------------------------+--------------------------------------+
-|      GENERAL COMMANDS      |      STRING COMMANDS         |       LIST COMMANDS          |            HASH COMMANDS             |
-+----------------------------+------------------------------+------------------------------+--------------------------------------+
-| SING                       | SET <key> <value>            | LLEN <key>                   | HSET <key> <field> <value>...        |
-| (returns "SONG")           | (store string value)         | (list size)                  | (set hash fields)                    |
-+----------------------------+------------------------------+------------------------------+--------------------------------------+
-| PING                       | GET <key>                    | LPUSH <key> <elem...>        | HGET <key> <field>                   |
-| (suggests trying sing)     | (get stored value)           | (push to head)               | (get field value)                    |
-+----------------------------+------------------------------+------------------------------+--------------------------------------+
-| ECHO <msg>                 | DEL <key>                    | RPUSH <key> <elem...>        | HGETALL <key>                         |
-| (return message)           | (delete a key)               | (push to tail)               | (all fields+values)                  |
-+----------------------------+------------------------------+------------------------------+--------------------------------------+
-| FLUSHALL                   | KEYS                         | LPOP <key>                   | HDEL <key> <field>...                |
-| (clear all data)           | (list all keys)              | (pop from head)              | (remove fields)                      |
-+----------------------------+------------------------------+------------------------------+--------------------------------------+
-|                            |                              | RPOP <key>                   |                                      |
-|                            |                              | (pop from tail)              |                                      |
-+----------------------------+------------------------------+------------------------------+--------------------------------------+
+| General Commands | Description | String Commands | Description | List Commands | Description | Hash Commands | Description |
+|------------------|-------------|-----------------|-------------|---------------|-------------|---------------|-------------|
+| **SING** | returns "SONG" | **SET key value** | store value | **LLEN key** | list size | **HSET key field value** | set fields |
+| **PING** | try 'sing' hint | **GET key** | get value | **LPUSH key elem** | push head | **HGET key field** | get field |
+| **ECHO msg** | echo message | **DEL key** | delete key | **RPUSH key elem** | push tail | **HGETALL key** | all fields |
+| **FLUSHALL** | clear all data | **KEYS** | list keys | **LPOP key** | pop head | **HDEL key field** | delete fields |
+|               |              |                 |            | **RPOP key** | pop tail |               |             |
+
 
