@@ -29,3 +29,4 @@ This project uses Makefile. Ensure you have a C++17 (or later ones) compiler.
 
 ### Future aspects- will be adding more commands
 
+#### inspiration https://build-your-own.org/redis/
