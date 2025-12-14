@@ -192,7 +192,12 @@ std::string CommandsHandling::ProcessCommand(std::string commandline){
         }else response<<"(nil)"<<"\r\n";
     }
     else  if(command == "HGETALL"){
-
+        if(tokens.size()<2) response<<"-Error: Require Key to 'hgetall\r\n";
+        std::unordered_map<std::string, std::string> h = database.HGETALL(tokens[1]);
+        for(auto& kv:h){
+            response<<kv.first<<":"<<kv.second<<"\n";
+        }
+        response<<"\r";
     }
     //Unknown command
     else{

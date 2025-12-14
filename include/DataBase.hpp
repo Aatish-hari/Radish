@@ -44,7 +44,7 @@ public:
     //Hash commands-
     void HSET(const std::string& key, const std::vector<std::string> elements);
     bool HGET(const std::string& key,  const std::string& field, std::string value);
-    void HGETALL(const std::string& key);
+    std::unordered_map<std::string, std::string> HGETALL(const std::string& key);
 };
 
 #endif

@@ -201,8 +201,8 @@ bool DataBase::HGET(const std::string& key, const std::string& field, std::strin
     return true;
 }
 
-void DataBase::HGETALL(const std::string& key){
-    
+std::unordered_map<std::string, std::string> DataBase::HGETALL(const std::string& key){
+    return hash_storage[key];
 }
 
 DataBase::DataBase() {}
