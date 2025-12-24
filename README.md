@@ -21,7 +21,7 @@ Mutex-protected singleton DataBase, per-client threads for multi-user support
 |                  |                 | RPOP key      |               |
 
 ## Installation
-This project uses Makefile. Ensure you have a C++17 (or later ones) compiler.   
+This project uses Makefile.   
 -First 'make' from project's root directory to make build folder and to get server.exe.   
 -Run ./server to start server, server will listen to default port 6379   
 -compile client.cpp and run client.exe, client will connect server   
