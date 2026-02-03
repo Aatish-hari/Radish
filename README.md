@@ -1,5 +1,5 @@
 # Radish
-Redis like in memory data store server implemented in C++. Radish can perform Redis functionality for strings, lists, and hashes, with auto Persistence and multiple client support.
+Redis like in memory data store server implemented in C++. Radish can perform Redis functionality for strings, lists, and hashes, with auto Persistence and multiple client support
 
 ## Features
 ### RESP Protocol:      
