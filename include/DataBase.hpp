@@ -14,7 +14,7 @@ private:
     DataBase& operator=(const DataBase&) = delete;
     std::mutex dbmutex;
     //data structures==
-    std::unordered_map<std::string, std::string> kv_storage;                
+    std::unordered_map<std::string, std::string> kv_storage;
     std::unordered_map<std::string, std::deque<std::string>> list_storage;
     std::unordered_map<std::string, std::unordered_map<std::string, std::string>> hash_storage;
 
@@ -43,7 +43,7 @@ public:
 
     //Hash commands-
     void HSET(const std::string& key, const std::vector<std::string> elements);
-    bool HGET(const std::string& key,  const std::string& field, std::string value);
+    bool HGET(const std::string& key,  const std::string& field, std::string& value);
     std::unordered_map<std::string, std::string> HGETALL(const std::string& key);
 };
 

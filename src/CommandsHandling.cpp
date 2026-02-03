@@ -85,7 +85,7 @@ std::string CommandsHandling::ProcessCommand(std::string commandline){
         response<<"+SONG\r\n";
     }
     else if(command =="PING") {
-        response<<"-This is not Redis this is Redi++, try 'sing'\r\n";
+        response<<"-This is not Redis this is Radish, try 'sing'\r\n";
     }
     else if(command == "ECHO"){             
         if(tokens.size() <2){

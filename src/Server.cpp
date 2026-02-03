@@ -35,7 +35,7 @@ void RedisServer::run(int port){
         return;
     }
 
-    std::cout<<"Redi++ Server Started\n"<<"Server listening on port "<<port<<std::endl;
+    std::cout<<"Radish Server Started\n"<<"Server listening on port "<<port<<std::endl;
     
     std::vector<std::thread> threads;
     CommandsHandling commandhandler;

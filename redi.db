@@ -1,8 +1,8 @@
 K glass water
-K email someone@example.com
-K username someone
 K name ubbe
-L fruits mango apple banana
+K username someone
+K email someone@example.com
 L companies meta tcs
-H user2 age:19 country:India name:aatish
-H user1 age:19 country:Norway name:ubbe
+L fruits grapes mango apple
+H user1 favcolor:blue name:ubbe country:Norway age:19 class:5
+H user2 favcolor:red name:aatish country:India age:19

@@ -33,7 +33,7 @@ int main() {
         return 1;
     }
 
-    std::cout << "Connected to Redi++ server\n";
+    std::cout << "Connected to Radish server\n";
 
     //REPL client loop
     while (true) {

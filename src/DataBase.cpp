@@ -194,7 +194,7 @@ void DataBase::HSET(const std::string& key, const std::vector<std::string> eleme
         field[elements[i]] = elements[i+1];
     }
 }
-bool DataBase::HGET(const std::string& key, const std::string& field, std::string value){
+bool DataBase::HGET(const std::string& key, const std::string& field, std::string& value){
     auto& fi= hash_storage[key];
     if(hash_storage.find(key) == hash_storage.end() || fi.find(field) == fi.end()) return false;
     value = fi[field];
